@@ -59,8 +59,8 @@ a:hover {
 
 .page {
   margin: 0 auto;
-  max-width: 760px;
-  padding: 0 20px 48px;
+  max-width: 1120px;
+  padding: 0 40px 56px;
 }
 
 .identity {
@@ -116,8 +116,8 @@ p {
 .intro-grid {
   align-items: start;
   display: grid;
-  gap: 36px;
-  grid-template-columns: minmax(0, 1fr) 248px;
+  gap: 40px;
+  grid-template-columns: minmax(0, 1fr) 220px;
 }
 
 .bio {
@@ -164,7 +164,7 @@ p {
 
 .content-section {
   border-top: 1px solid var(--line);
-  margin-top: 34px;
+  margin-top: 40px;
   padding-top: 28px;
 }
 
@@ -179,7 +179,7 @@ p {
 }
 
 .plain-list li {
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 
 .publications li {
