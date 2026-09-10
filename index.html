@@ -1,15 +1,15 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Yaoxuan Zeng</title>
-    <link rel="stylesheet" href="styles.css?v=20260612-wide" />
+    <link rel="stylesheet" href="styles.css?v=20260910-research-preview" />
   </head>
-  <body>
+  <body id="home">
     <header class="site-header">
       <nav class="top-nav" aria-label="Primary navigation">
-        <a class="active" href="index.html">Home</a>
+        <a class="active" href="#home" aria-current="location">Home</a>
         <a href="#research">Research</a>
         <a href="#publications">Publications</a>
       </nav>
@@ -61,13 +61,118 @@
         </aside>
       </section>
 
-      <section class="content-section" id="research">
-        <h2>Research</h2>
-        <p>
-          I study fluid dynamics on different planets, including ocean
-          circulation on icy moons, jets on giant planets, and ocean dynamics on
-          tidally-locked exoplanets.
-        </p>
+      <section class="content-section" id="research" aria-labelledby="research-title">
+        <h2 id="research-title">Research</h2>
+        <p class="research-lead">I use theory and numerical simulations to explore how rotation, buoyancy,
+          and turbulence shape planetary oceans and atmospheres.</p>
+
+        <article class="research-topic" aria-labelledby="icy-moons-title">
+          <h3 id="icy-moons-title">Ocean circulation on icy moons</h3>
+          <div class="research-grid">
+            <div class="research-context">
+              <figure class="world-figure">
+                <div class="world-image"><img src="research-enceladus.jpg" width="1034" height="1092"
+                  alt="Cassini view of Enceladus, showing its icy surface and south-polar fractures" loading="lazy" /></div>
+                <figcaption>Enceladus · Cassini<br />
+                  <a href="https://science.nasa.gov/resource/saturns-moon-enceladus-poster-version-a/" target="_blank" rel="noopener noreferrer">NASA/JPL-Caltech/Space Science Institute</a></figcaption>
+              </figure>
+              <p>Saturn’s moon Enceladus harbors a liquid-water ocean beneath its icy shell.
+                Heat from the rocky interior and freezing and melting at the ice–ocean interface
+                help drive circulation in this hidden ocean, connecting the seafloor to the ice above.</p>
+            </div>
+            <div class="research-work">
+              <p>I investigate how salinity, rotation, and convection shape ocean circulation and
+                heat transport on icy moons. My work examines interactions between the ocean and
+                ice shell, how to represent slantwise convection in global models, and how convection
+                and baroclinic eddies interact. I am also interested in how these flows transport tracers.</p>
+              <figure class="research-visual">
+                <a class="figure-link" href="research-icy-ocean-processes.png" target="_blank" rel="noopener noreferrer"
+                  aria-label="Open the icy moon ocean schematic at full size">
+                  <img class="ocean-schematic" src="research-icy-ocean-processes.png" width="1655" height="1800"
+                    alt="Schematic of an icy moon ocean connecting the ice shell, ocean and rocky core, with convection, baroclinic eddies and tidal motions at different scales" loading="lazy" />
+                </a>
+                <figcaption>Processes across scales in an icy moon ocean. <a href="research-icy-ocean-processes.png" target="_blank" rel="noopener noreferrer">View full size</a>.</figcaption>
+              </figure>
+              <p class="related-papers"><span>Related papers</span>
+                <a href="https://iopscience.iop.org/article/10.3847/PSJ/ad0cba" target="_blank" rel="noopener noreferrer">Salinity &amp; ice–ocean interaction</a> ·
+                <a href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2025GL118761" target="_blank" rel="noopener noreferrer">Slantwise convection</a> ·
+                <a href="https://arxiv.org/abs/2606.22547" target="_blank" rel="noopener noreferrer">Parameterization (under review)</a>
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <article class="research-topic" aria-labelledby="giant-jets-title">
+          <h3 id="giant-jets-title">Jets on giant planets</h3>
+          <div class="research-grid">
+            <div class="research-context">
+              <figure class="world-figure">
+                <div class="world-image"><img src="research-jupiter.webp" width="2160" height="2160"
+                  alt="Enhanced-color JunoCam view of Jupiter’s swirling cloud bands, with south at the top" loading="lazy" /></div>
+                <figcaption>Jupiter · JunoCam (enhanced color; south up)<br />
+                  <a href="https://science.nasa.gov/image-detail/jupiter-exotic-marble/" target="_blank" rel="noopener noreferrer">Data: NASA/JPL-Caltech/SwRI/MSSS;<br />processing: Prateek Sarpal, © CC NC SA</a></figcaption>
+              </figure>
+              <p>The atmospheres of giant planets organize into powerful east–west jets.
+                Jupiter and Saturn have eastward equatorial jets, while Uranus and Neptune
+                have westward ones. Their visible cloud patterns offer a window into fluid
+                motions that extend beneath the cloud tops.</p>
+            </div>
+            <div class="research-work">
+              <p>I study how the depth of atmospheric flows affects the formation and organization
+                of planetary jets. Using idealized models, I investigate what controls the direction
+                of the equatorial jet, the number and spacing of jets, and the distribution of energy
+                between jets and turbulent eddies.</p>
+              <figure class="research-visual video-figure">
+                <video controls playsinline preload="none" poster="research-jets-poster.png"
+                  aria-label="Animation of zonal flow in idealized giant-planet jet simulations" aria-describedby="jets-caption">
+                  <source src="U_animation.mp4" type="video/mp4" />
+                  <a href="U_animation.mp4">Watch the giant-planet jet animation</a>.
+                </video>
+                <figcaption id="jets-caption">Zonal flow evolving in idealized simulations of giant-planet jets.</figcaption>
+              </figure>
+              <p class="related-papers"><span>Related paper</span>
+                <a href="https://iopscience.iop.org/article/10.3847/PSJ/ae6da7" target="_blank" rel="noopener noreferrer">Influence of jet depth on giant-planet jets</a>
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <article class="research-topic" aria-labelledby="superrotation-title">
+          <h3 id="superrotation-title">Oceanic superrotation on tidally locked planets</h3>
+          <div class="research-grid">
+            <div class="research-context">
+              <figure class="world-figure">
+                <div class="world-image system-image"><img src="research-trappist-1.jpeg" width="2000" height="1123"
+                  alt="Artist’s illustration comparing the seven-planet TRAPPIST-1 system with the inner Solar System, with TRAPPIST-1 orbits enlarged 25 times" loading="lazy" /></div>
+                <figcaption>TRAPPIST-1 and the inner Solar System · illustration<br />
+                  <a href="https://www.jpl.nasa.gov/images/pia21424-the-trappist-1-habitable-zone/" target="_blank" rel="noopener noreferrer">NASA/JPL-Caltech</a></figcaption>
+              </figure>
+              <p>TRAPPIST-1 hosts seven roughly Earth-sized planets in close orbits around a cool
+                dwarf star. Such close-in planets are expected to be tidally locked, with permanent
+                day and night sides. If surface oceans are present, they experience a pattern of
+                heating very different from Earth’s.</p>
+            </div>
+            <div class="research-work">
+              <p>I investigate ocean circulation on idealized tidally locked terrestrial planets,
+                focusing on superrotation—an eastward equatorial current relative to the surface.
+                My research explores how winds, ocean waves, and planetary rotation govern its
+                development and maintenance, as well as how ocean and sea-ice dynamics affect
+                heat redistribution and climate.</p>
+              <figure class="research-visual video-figure">
+                <video controls playsinline preload="none" poster="research-ocean-poster.png"
+                  aria-label="Animation of ocean surface zonal velocity on an idealized tidally locked planet" aria-describedby="ocean-caption">
+                  <source src="ocean_surface_zonal_velocity.mp4" type="video/mp4" />
+                  <a href="ocean_surface_zonal_velocity.mp4">Watch the ocean circulation animation</a>.
+                </video>
+                <figcaption id="ocean-caption">Ocean surface zonal velocity on a simulated tidally locked planet.</figcaption>
+              </figure>
+              <p class="related-papers"><span>Related papers</span>
+                <a href="https://iopscience.iop.org/article/10.3847/1538-4357/abe12f" target="_blank" rel="noopener noreferrer">Oceanic superrotation</a> ·
+                <a href="https://www.nature.com/articles/s41550-019-0883-z" target="_blank" rel="noopener noreferrer">Sea-ice drift &amp; climate</a>
+              </p>
+            </div>
+          </div>
+        </article>
       </section>
 
       <section class="content-section" id="education">
@@ -184,5 +289,6 @@
       </div>
       <p class="copyright">© 2026 Yaoxuan Zeng</p>
     </footer>
+    <script src="navigation.js" defer></script>
   </body>
 </html>
