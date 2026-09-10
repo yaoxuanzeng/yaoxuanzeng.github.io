@@ -288,7 +288,7 @@ a:focus-visible, video:focus-visible {
   padding-top: 30px;
 }
 .research-topic h3 {
-  font-size: 1.32rem;
+  font-size: 1.7rem;
   font-weight: 650;
   line-height: 1.3;
   margin: 0 0 22px;
@@ -358,6 +358,9 @@ figcaption {
   font-size: 0.83rem;
   line-height: 1.65;
 }
+.related-papers a {
+  display: inline-block;
+}
 .related-papers span {
   display: block;
   color: var(--muted);
@@ -372,7 +375,7 @@ figcaption {
 @media (max-width: 760px) {
   html { scroll-padding-top: 82px; }
   .research-grid { grid-template-columns: 1fr; gap: 8px; }
-  .research-topic h3 { font-size: 1.22rem; }
+  .research-topic h3 { font-size: 1.5rem; }
   .world-figure { max-width: 460px; }
   .world-image { height: 240px; }
   .system-image { height: auto; }
